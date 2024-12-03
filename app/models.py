@@ -74,6 +74,7 @@ class Turno(models.Model):
 class Disciplina(models.Model):
     nome = models.CharField(max_length=100, verbose_name="Nome da disciplina")
     area_saber = models.ForeignKey(AreaSaber, on_delete=models.CASCADE, verbose_name='Área do Saber')
+    estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE, verbose_name='Pessoa', null=True) 
 
     def __str__(self):
         return self.nome
@@ -93,6 +94,7 @@ class Avaliacao(models.Model):
     disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE, verbose_name='Disciplina')
     nota = models.IntegerField(verbose_name='Nota')
     tipoavaliacao = models.ForeignKey("TipoAvaliacao", on_delete=models.CASCADE, verbose_name='Tipo da Avaliação')
+    estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE, verbose_name='Pessoa', null=True) 
 
     def __str__(self):
         return f'Avaliação de {self.disciplina} do curso de {self.curso}'
@@ -103,6 +105,7 @@ class Frequencia(models.Model):
     disciplina = models.ForeignKey(Disciplina, on_delete=models.CASCADE, verbose_name='Disciplina')
     estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE, verbose_name='Pessoa', null=True)
     numero_faltas = models.IntegerField(verbose_name='Numero de Faltas')
+    estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE, verbose_name='Pessoa', null=True) 
 
     def __str__(self):
         return f'{self.estudante}, {self.numero_faltas}'
