@@ -88,31 +88,17 @@ navigation"
       </div>
     </nav>
     <div class="container mt-5">
-      <h2 class="mb-4">Tabela de Pessoas</h2>
+      <h2 class="mb-4">Tabela de Areas do Saber</h2>
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Nome</th>
-            <th scope="col">Nome do Pai</th>
-            <th scope="col">Nome da Mãe</th>
-            <th scope="col">CPF</th>
-            <th scope="col">Data de Nascimento</th>
-            <th scope="col">Email</th>
-            <th scope="col">Cidade</th>
-            <th scope="col">Ocupação</th>
           </tr>
         </thead>
         <tbody>
-          {% for i in pessoas %}
+          {% for i in areasdosaber %}
           <tr>
             <td>{{ i.nome }}</td>
-            <td>{{ i.nome_do_pai }}</td>
-            <td>{{ i.nome_da_mae }}</td>
-            <td>{{ i.cpf }}</td>
-            <td>{{ i.data_nasc }}</td>
-            <td>{{ i.email }}</td>
-            <td>{{ i.cidade }}</td>
-            <td>{{ i.ocupacao }}</td>
           </tr>
           {% endfor %}
         </tbody>

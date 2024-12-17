@@ -84,6 +84,7 @@ class Matricula(models.Model):
     curso = models.ForeignKey(Curso, on_delete=models.CASCADE, verbose_name='Curso')
     estudante = models.ForeignKey(Estudante, on_delete=models.CASCADE, verbose_name='Pessoa', null=True)
     data_inicio = models.DateField()
+    data_termino = models.DateField()
 
     def __str__(self):
         return f'{self.estudante}, {self.curso}, {self.instituicao}'

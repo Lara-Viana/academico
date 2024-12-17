@@ -2,6 +2,7 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+
     <meta
       name="viewport"
       content="width=device-width,
@@ -9,16 +10,15 @@ initial-scale=1.0"
     />
     <title>Página Inicial</title>
     <!-- Incluindo Bootstrap CSS -->
-
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css
-/bootstrap.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.
+min.css"
     />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-      <a class="navbar-brand" href="/">Acadêmico</a>
+      <a class="navbar-brand" href="/">Biblioteca</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -38,6 +38,12 @@ navigation"
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="/pessoas/">Pessoas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/ocupacoes/">Ocupações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="/instituicoes/">Instituições</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="/areasdosaber/">Áreas do Saber</a>
@@ -67,7 +73,7 @@ navigation"
             <a class="nav-link text-dark" href="/cidade/">Cidades</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-dark" href="/ocorrencias/">ocorrencias</a>
+            <a class="nav-link text-dark" href="/ocorrencias/">Ocorrencias</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-dark" href="/disciplinaporcurso/">Disciplina por Curso</a>
@@ -82,41 +88,18 @@ navigation"
       </div>
     </nav>
     <div class="container mt-5">
-      <h2 class="mb-4">Tabela de Livros</h2>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Autor</th>
-            <th scope="col">Editora</th>
-            <th scope="col">Gênero</th>
-            <th scope="col">Preço</th>
-            <th scope="col">Data Publicação</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for livros in livros %}
-          <tr>
-            <td>{{ livros.nome }}</td>
-            <td>{{ livros.autor }}</td>
-
-            <td>{{ livros.editora }}</td>
-            <td>{{ livros.genero }}</td>
-            <td>{{ livros.preco }}</td>
-            <td>{{ livros.data_plub }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+      <div class="jumbotron text-center">
+        <h1 class="display-4">Olá, é bom te ver por aqui</h1>
+        <p class="lead">Esta é a página inicial do Academico</p>
+        <p class="lead">Seja Bem Vindo(A)</p>
+      </div>
     </div>
     <!-- Incluindo jQuery e Bootstrap JS -->
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/di
-st/umd/popper.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/b
-ootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popp
+er.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.mi
+n.js"></script>
   </body>
 </html>
